@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "movieDetails.app"
-               BlueprintName = "movieDetails"
-               ReferencedContainer = "container:movieDetails.xcodeproj">
+               BuildableName = "movieListing.app"
+               BlueprintName = "movieListing"
+               ReferencedContainer = "container:movieListing.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "movieDetailsTests.xctest"
-               BlueprintName = "movieDetailsTests"
-               ReferencedContainer = "container:movieDetails.xcodeproj">
+               BuildableName = "movieListingTests.xctest"
+               BlueprintName = "movieListingTests"
+               ReferencedContainer = "container:movieListing.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "movieDetails.app"
-            BlueprintName = "movieDetails"
-            ReferencedContainer = "container:movieDetails.xcodeproj">
+            BuildableName = "movieListing.app"
+            BlueprintName = "movieListing"
+            ReferencedContainer = "container:movieListing.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "movieDetails.app"
-            BlueprintName = "movieDetails"
-            ReferencedContainer = "container:movieDetails.xcodeproj">
+            BuildableName = "movieListing.app"
+            BlueprintName = "movieListing"
+            ReferencedContainer = "container:movieListing.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
