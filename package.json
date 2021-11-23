@@ -13,11 +13,15 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.6.2",
+    "axios": "^0.24.0",
     "react": "17.0.2",
-    "react-native": "0.65.1",
     "react-dom": "^17.0.2",
+    "react-native": "0.65.1",
     "react-native-web": "^0.17.1",
+    "react-redux": "^7.2.6",
     "react-scripts": "4.0.3",
+    "redux": "^4.1.2",
     "web-vitals": "^0.2.4"
   },
   "devDependencies": {
@@ -25,8 +29,8 @@
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
     "metro-react-native-babel-preset": "^0.66.2",
-    "react-test-renderer": "17.0.2",
-    "react-native-codegen": "0.0.7"
+    "react-native-codegen": "0.0.7",
+    "react-test-renderer": "17.0.2"
   },
   "browserslist": {
     "production": [
