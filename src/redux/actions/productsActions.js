@@ -1,20 +1,20 @@
 import { ActionTypes } from "../constants/action-types";
 
-export const setProducts = (products) => {
+export const setMovies = (movies) => {
   return {
-    type: ActionTypes.SET_PRODUCTS,
-    payload: products,
+    type: ActionTypes.SET_MOVIE,
+    payload: movies,
   };
 };
 
-export const selectedProduct = (product) => {
+export const selectedMovie = (movies) => {
   return {
-    type: ActionTypes.SELECTED_PRODUCT,
-    payload: product,
+    type: ActionTypes.SELECTED_MOVIE,
+    payload: movies,
   };
 };
-export const removeSelectedProduct = () => {
+export const removeSelectedMovies = () => {
   return {
-    type: ActionTypes.REMOVE_SELECTED_PRODUCT,
+    type: ActionTypes.REMOVE_SELECTED_MOVIE,
   };
 };

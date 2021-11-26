@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const ProductComponent = () => {
-  const products = useSelector((state) => state.allProducts.products);
-  const renderList = products.map((product) => {
-    const { id, title, image, price, category } = product;
+  const movies = useSelector((state) => state.allMovies.movies);
+  const renderList = movies.map((movie) => {
+    const { id, title, image, price, category } = movie;
     return (
       <div className="four wide column" key={id}>
         <Link to={`/product/${id}`}>
