@@ -16,12 +16,12 @@ const MovieComponent = () => {
   };
 
   const renderList = movies.map((movie) => {
-    const { display_title, multimedia, summary_short, critics_pick } = movie;
+    const { display_title, multimedia, critics_pick, byline } = movie;
     return (
       <div
         className="four wide column"
         key={display_title}
-        onClick={selectingMovie(display_title)}
+        onClick={() => selectingMovie(display_title)}
       >
         <Link to={`/movies/${display_title}`}>
           <div className="ui link cards">
@@ -36,7 +36,7 @@ const MovieComponent = () => {
               </div>
               <div className="content">
                 <div className="header">{display_title}</div>
-                <h4 className="header">{summary_short}</h4>
+                <h4 className="header">{byline}</h4>
                 <div className="meta price">Critics Pick {critics_pick}</div>
               </div>
             </div>

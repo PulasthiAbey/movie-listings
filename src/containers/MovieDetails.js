@@ -9,7 +9,7 @@ import {
 
 const MovieDetails = () => {
   const { displayTitle } = useParams();
-  let movie = useSelector((state) => state.selectedList);
+  let movie = useSelector((state) => state.movies.selectedList);
   const {
     display_title,
     headline,
@@ -21,24 +21,6 @@ const MovieDetails = () => {
     opening_date,
     date_updated,
   } = movie;
-  // const dispatch = useDispatch();
-  // const fetchProductDetail = async (id) => {
-  //   const response = await axios
-  //     .get(
-  //       `https://api.nytimes.com/svc/movies/v2/reviews/all.json?api-key=F493stB50gvFVeedyFlTKBA9UzA7odGY/api/${display_title}`
-  //     )
-  //     .catch((err) => {
-  //       console.log("Err: ", err);
-  //     });
-  //   dispatch(selectedMovie(response.data));
-  // };
-
-  // useEffect(() => {
-  //   if (displayTitle && displayTitle !== "") fetchProductDetail(displayTitle);
-  //   return () => {
-  //     dispatch(removeSelectedMovies());
-  //   };
-  // }, [displayTitle]);
   return (
     <div className="ui grid container">
       {Object.keys(movie).length === 0 ? (
@@ -62,9 +44,9 @@ const MovieDetails = () => {
                 <h2>Critics Picks {critics_pick}</h2>
                 <h3 className="ui brown block header">{headline}</h3>
                 <p>{summary_short}</p>
-                <h4>{publication_date}</h4>
-                <h4>{opening_date}</h4>
-                <h4>{date_updated}</h4>
+                <h4>Publication Date: {publication_date}</h4>
+                <h4>Opening Date: {opening_date}</h4>
+                <h6>Updated : {date_updated}</h6>
                 <h5>
                   <a className="meta" href={link.url}>
                     {link.suggested_link_text}
