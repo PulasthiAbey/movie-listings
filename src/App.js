@@ -11,6 +11,7 @@ function App() {
       <Router>
         <Header />
         <Switch>
+          <Route path="" />
           <Route path="/" exact component={MovieListing} />
           <Route path="/movies/:displayTitle" component={MovieDetails} />
           <Route>404 Not Found!</Route>
