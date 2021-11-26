@@ -1,16 +1,10 @@
 import { combineReducers } from "redux";
-import {
-  movieReducer,
-  selectedMovieReducer,
-  signupReducer,
-  loginReducer,
-  logoutReducer,
-} from "./movieReducer";
+import { movieReducer, selectedMovieReducer } from "./movieReducer";
+import { signupReducer, logoutReducer } from "./loginReducer";
 
 const reducers = combineReducers({
   allMovies: movieReducer,
   movies: selectedMovieReducer,
-  login: loginReducer,
   logout: logoutReducer,
   signin: signupReducer,
 });
