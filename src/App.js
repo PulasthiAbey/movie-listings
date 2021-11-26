@@ -6,7 +6,7 @@ import SplashScreen from "./containers/SplashScreen";
 import RoutesScreen from "./containers/RoutesScreen";
 
 function App() {
-  const { isLoggedIn } = useSelector((state) => state.initialState);
+  // const { isLoggedIn } = useSelector((state) => state.login.initialState);
   return (
     <div className="App">
       {/* {isLoggedIn ? <SplashScreen /> : <RoutesScreen />}; */}

@@ -6,6 +6,7 @@ import {
   loginReducer,
   logoutReducer,
 } from "./movieReducer";
+
 const reducers = combineReducers({
   allMovies: movieReducer,
   movies: selectedMovieReducer,
@@ -13,4 +14,5 @@ const reducers = combineReducers({
   logout: logoutReducer,
   signin: signupReducer,
 });
+
 export default reducers;

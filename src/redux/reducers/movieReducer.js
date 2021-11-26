@@ -50,6 +50,7 @@ export const loginReducer = (state = initialState, { type, payload }) => {
     case ActionTypes.LOGIN:
       return {
         ...state,
+        isLoggedIn: true,
       };
     default:
       return state;
