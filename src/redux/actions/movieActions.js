@@ -13,8 +13,29 @@ export const selectedMovie = (movies) => {
     payload: movies,
   };
 };
+
 export const removeSelectedMovies = () => {
   return {
     type: ActionTypes.REMOVE_SELECTED_MOVIE,
+  };
+};
+
+export const signup = (data) => {
+  return {
+    type: ActionTypes.SIGNUP,
+    payload: data,
+  };
+};
+
+export const login = (data) => {
+  return {
+    type: ActionTypes.LOGIN,
+    payload: data,
+  };
+};
+
+export const logout = () => {
+  return {
+    type: ActionTypes.LOGOUT,
   };
 };

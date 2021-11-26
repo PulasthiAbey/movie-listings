@@ -2,14 +2,8 @@ import { ActionTypes } from "../constants/action-types";
 const initialState = {
   movies: [],
   selectedList: null,
-  signup: {
-    userName: null,
-    password: null,
-  },
-  login: {
-    userNameInput: null,
-    passwordInput: null,
-  },
+  userName: null,
+  password: null,
   isLoggedIn: false,
 };
 
@@ -53,15 +47,27 @@ export const signupReducer = (state = initialState, { type, payload }) => {
 
 export const loginReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case ActionTypes.SIGNUP:
+    case ActionTypes.LOGIN:
       return {
         ...state,
-        if() {},
-        userNameInput: payload.userName,
-        passwordInput: payload.password,
       };
     default:
       return state;
   }
 };
+
+export const logoutReducer = (state = initialState, { type, payload }) => {
+  switch (type) {
+    case ActionTypes.LOGOUT:
+      return {
+        ...state,
+        userName: null,
+        password: null,
+        isLoggedIn: false,
+      };
+    default:
+      return state;
+  }
+};
+
 

@@ -1,6 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+
+import { useDispatch } from "react-redux";
+import { auth, provider } from "./firebase";
+import { login, logout, signup } from "./redux/actions/movieActions";
 
 const Signup = () => {
+  const dispatch = useDispatch();
+  const [data, setData] = useState({
+    userName: null,
+    password: null,
+  });
+
+  const setEmail = (email) => {
+    setData({
+      userName: email,
+    });
+  };
+
+  const setPassword = (userpassword) => {
+    setData({
+      password: userpassword,
+    });
+  };
+
   return (
     <div className="container">
       <form>
@@ -12,6 +34,7 @@ const Signup = () => {
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             placeholder="Enter email"
+            onChange={() => setEmail()}
           />
           <small id="emailHelp" class="form-text text-muted">
             We'll never share your email with anyone else.
@@ -27,7 +50,11 @@ const Signup = () => {
           />
         </div>
 
-        <button type="submit" class="btn btn-primary">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          onClick={() => dispatch(signup())}
+        >
           Submit
         </button>
       </form>

@@ -4,4 +4,5 @@ export const ActionTypes = {
   REMOVE_SELECTED_MOVIE: "REMOVE_SELECTED_MOVIE",
   LOGIN: "LOGIN",
   SIGNUP: "SIGNUP",
+  LOGOUT: "LOGOUT",
 };
