@@ -9,7 +9,8 @@ function App() {
   const { isLoggedIn } = useSelector((state) => state.initialState);
   return (
     <div className="App">
-      {isLoggedIn ? <SplashScreen /> : <RoutesScreen />}
+      {/* {isLoggedIn ? <SplashScreen /> : <RoutesScreen />}; */}
+      <RoutesScreen />
     </div>
   );
 }
