@@ -6,7 +6,7 @@ const initialState = {
 export const movieReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ActionTypes.SET_MOVIE:
-      return { ...state, products: payload };
+      return { ...state, movies: payload };
     default:
       return state;
   }
