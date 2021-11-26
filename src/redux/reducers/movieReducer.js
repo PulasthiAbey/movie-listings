@@ -27,5 +27,3 @@ export const selectedMovieReducer = (
       return state;
   }
 };
-
-
