@@ -1,19 +1,21 @@
 import React, { useEffect, useCallback, useMemo } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { setMovies } from "../redux/actions/productsActions";
-import ProductComponent from "./ProductComponent";
+import { setMovies } from "../redux/actions/movieActions";
+import MovieComponent from "./MovieComponent";
 
-const ProductPage = () => {
+const MovieListing = () => {
   const movies = useSelector((state) => state.allMovies.movies);
   const dispatch = useDispatch();
   const fetchProducts = async () => {
     const response = await axios
-      .get("https://fakestoreapi.com/products")
+      .get(
+        "https://api.nytimes.com/svc/movies/v2/reviews/all.json?api-key=F493stB50gvFVeedyFlTKBA9UzA7odGY"
+      )
       .catch((err) => {
         console.log("Err: ", err);
       });
-    dispatch(setMovies(response.data));
+    dispatch(setMovies(response.data.results));
   };
 
   useEffect(() => {
@@ -23,9 +25,9 @@ const ProductPage = () => {
   console.log("Movies :", movies);
   return (
     <div className="ui grid container">
-      <ProductComponent />
+      <MovieComponent />
     </div>
   );
 };
 
-export default ProductPage;
+export default MovieListing;

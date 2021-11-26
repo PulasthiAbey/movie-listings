@@ -1,6 +1,7 @@
 import { ActionTypes } from "../constants/action-types";
 const initialState = {
   movies: [],
+  selectedList: [],
 };
 
 export const movieReducer = (state = initialState, { type, payload }) => {
@@ -16,7 +17,7 @@ export const selectedMovieReducer = (state = {}, { type, payload }) => {
   console.log(type);
   switch (type) {
     case ActionTypes.SELECTED_MOVIE:
-      return { ...state, ...payload };
+      return { ...state, selectedList: payload };
     case ActionTypes.REMOVE_SELECTED_MOVIE:
       return {};
     default:
